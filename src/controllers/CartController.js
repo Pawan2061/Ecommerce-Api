@@ -59,11 +59,9 @@ const updateCart = async (req, res) => {
     if (!Cart) {
       return res.status(404).send("Cart not found!");
     }
-    console.log(
-      Cart.cartItems.find((item) => {
-        console.log(item.quantity);
-      })
-    );
+
+    const upda = Cart.cartItems.find((item) => {});
+
     const { productId, quantity } = req.body;
 
     const updatedCart = await Carts.findByIdAndUpdate(cart_id, {
